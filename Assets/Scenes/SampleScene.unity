@@ -2568,7 +2568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e804f23103cac491890c7a5f1d3aace1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartScreen
-  welcomeText: {fileID: 2145361801}
+  welcomeText: {fileID: 818420673}
   clockText: {fileID: 2145361801}
   dateText: {fileID: 453948635}
   phrase: {fileID: 209808544}
