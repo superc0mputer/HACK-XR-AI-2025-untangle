@@ -19,6 +19,7 @@ public class MemoryBox : MonoBehaviour
     [Header("Pop Animation")]
     public float popDuration = 0.5f;
     public float floatHeight = 0.3f;  // How high the text floats up
+    public GameObject confetti;
     
     private bool isOpened = false;
     private Collider boxCollider;
@@ -87,6 +88,8 @@ public class MemoryBox : MonoBehaviour
         {
             panel.SetActive(true);
             StartCoroutine(AnimatePop());
+            confetti.SetActive(true);
+            
         }
     }
 
