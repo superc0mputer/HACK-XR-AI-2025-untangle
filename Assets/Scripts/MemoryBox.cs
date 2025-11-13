@@ -6,27 +6,41 @@ using UnityEngine.InputSystem;
 
 public class MemoryBox : MonoBehaviour
 {
+    public JournalEntry journalEntry;
+
     [Header("Assign Parts")]
+    public GameObject panel; // Must be the parent object of the canvas
     public GameObject boxVisuals;
-    public GameObject journalContent; // The Text object inside
+    public TextMeshProUGUI mood;
+    public TextMeshProUGUI eventTags;
+    public TextMeshProUGUI notes;
+    public TextMeshProUGUI emoji;
 
     [Header("Pop Animation")]
     public float popDuration = 0.5f;
     public float floatHeight = 0.3f;  // How high the text floats up
-
+    
     private bool isOpened = false;
     private Collider boxCollider;
     private Grabbable grabbable;
+
+    void Awake()
+    {
+        mood.text = journalEntry.Mood;
+        eventTags.text = journalEntry.EventTags;
+        notes.text = journalEntry.Notes;
+        emoji.text = journalEntry.Emoji;
+    }
 
     void Start()
     {
         boxCollider = GetComponent<Collider>();
         
         // Ensure text is hidden and small at the start
-        if (journalContent != null)
+        if (panel != null)
         {
-            journalContent.SetActive(false);
-            journalContent.transform.localScale = Vector3.zero;
+            panel.SetActive(false);
+            panel.transform.localScale = Vector3.zero;
         }
         
         // 1. Find the Grabbable component on this object
@@ -67,9 +81,9 @@ public class MemoryBox : MonoBehaviour
         }
 
         // 3. Start the "Plop" animation
-        if (journalContent != null)
+        if (panel != null)
         {
-            journalContent.SetActive(true);
+            panel.SetActive(true);
             //StartCoroutine(AnimatePop());
         }
     }
@@ -83,7 +97,7 @@ public class MemoryBox : MonoBehaviour
         // (Hackathon tip: Set the scale you want in Scene view, script will respect it)
         endScale = new Vector3(0.005f, 0.005f, 0.005f); 
 
-        Vector3 startPos = journalContent.transform.localPosition;
+        Vector3 startPos = panel.transform.localPosition;
         Vector3 endPos = startPos + new Vector3(0, floatHeight, 0);
 
         float t = 0;
@@ -94,20 +108,10 @@ public class MemoryBox : MonoBehaviour
             // "Overshoot" math for a bouncy pop effect
             float ease = Mathf.Sin(t * Mathf.PI * 0.5f); 
 
-            journalContent.transform.localScale = Vector3.Lerp(startScale, endScale, ease);
-            journalContent.transform.localPosition = Vector3.Lerp(startPos, endPos, ease);
+            panel.transform.localScale = Vector3.Lerp(startScale, endScale, ease);
+            panel.transform.localPosition = Vector3.Lerp(startPos, endPos, ease);
             
             yield return null;
-        }
-    }
-    void Update()
-    {
-        // 2. USE THIS INSTEAD
-        // We check if a keyboard is present AND if the space key was pressed
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            Debug.Log("Debug: Forcing box to Open() with Spacebar.");
-            Open();
         }
     }
 }
