@@ -31,9 +31,9 @@ public class StartScreen : MonoBehaviour
         string date = now.ToString("dddd, MMMM dd");
         string time = now.ToString("h:mm tt");
 
-        clockText.text = $"{time}\n\n";
-        dateText.text = $"Today is {date}\n +";
-        welcomeText.text = $"{greeting}, {username}\n\n";
+        clockText.text = $"{time}\n";
+        dateText.text = $"Today is {date}\n";
+        welcomeText.text = $"{greeting}, {username}\n";
         phrase.text = $"Are you ready to get started?";
     }
 

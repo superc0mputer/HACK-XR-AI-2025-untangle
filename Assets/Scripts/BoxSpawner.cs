@@ -108,7 +108,7 @@ public class BoxSpawner : MonoBehaviour
             if (memoryBoxScript != null)
             {
                 // Pass the correct journal entry from our list
-                memoryBoxScript.journalEntry = journalEntries[i];
+                memoryBoxScript.Initialize(journalEntries[i]);
             }
             else
             {

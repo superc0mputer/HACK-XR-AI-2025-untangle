@@ -24,8 +24,10 @@ public class MemoryBox : MonoBehaviour
     private Collider boxCollider;
     private Grabbable grabbable;
 
-    void Awake()
+    // This is called by BoxSpawner right after creating the box.
+    public void Initialize(JournalEntry entry)
     {
+        journalEntry = entry;
         mood.text = journalEntry.Mood;
         eventTags.text = journalEntry.EventTags;
         notes.text = journalEntry.Notes;
@@ -84,7 +86,7 @@ public class MemoryBox : MonoBehaviour
         if (panel != null)
         {
             panel.SetActive(true);
-            //StartCoroutine(AnimatePop());
+            StartCoroutine(AnimatePop());
         }
     }
 
