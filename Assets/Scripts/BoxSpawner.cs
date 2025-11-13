@@ -36,7 +36,7 @@ public class BoxSpawner : MonoBehaviour
         string[] lines = journalCSV.text.Split('\n');
         
         // Start from i=1 to skip the header row
-        for (int i = 0; i < lines.Length; i++)
+        for (int i = 1; i < lines.Length; i++)
         {
             string line = lines[i].Trim();
             if (string.IsNullOrEmpty(line)) continue;
