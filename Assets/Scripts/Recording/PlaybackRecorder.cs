@@ -99,7 +99,7 @@ public class PlaybackRecorder : MonoBehaviour
         isRecording = true;
 
         // Visuals
-        UpdateUI(recordColor, "Stop & Play");
+        UpdateUI(recordColor, "Stop Recording");
         Debug.Log("Recording Started...");
     }
 
