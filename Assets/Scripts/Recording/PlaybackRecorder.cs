@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -119,7 +120,7 @@ public class PlaybackRecorder : MonoBehaviour
             
             recordingCount++;
             // Increment count for naming
-            string recName = "Recording " + recordingCount; // + date maybe
+            string recName = "Recording_" + DateTime.Now.ToString("dd-MMM_HH-mm");
             
             // Instantiate the prefab into the scrollview container
             
