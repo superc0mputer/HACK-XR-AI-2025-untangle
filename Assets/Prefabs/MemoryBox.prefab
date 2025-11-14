@@ -2647,6 +2647,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2666243953996238644}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3460620060771751862
 GameObject:
   m_ObjectHideFlags: 0
@@ -6442,6 +6454,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1028623747985114543, guid: e956e9130e99349e99442ab3dd1d8a2e, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7268196036189201024, guid: e956e9130e99349e99442ab3dd1d8a2e, type: 3}
+      propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8315409279104253969, guid: e956e9130e99349e99442ab3dd1d8a2e, type: 3}
