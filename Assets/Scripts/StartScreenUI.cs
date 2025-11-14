@@ -24,7 +24,7 @@ public class StartScreen : MonoBehaviour
     void UpdateText()
     {
         DateTime now = DateTime.Now;
-        string greeting = "Good evening";
+        string greeting = "Good evening,";
         if (now.Hour < 12) greeting = "Good morning";
         else if (now.Hour < 18) greeting = "Good afternoon";
 
@@ -34,7 +34,8 @@ public class StartScreen : MonoBehaviour
         clockText.text = $"{time}\n";
         dateText.text = $"Today is {date}\n";
         welcomeText.text = $"{greeting}, {username}\n";
-        phrase.text = $"Are you ready to get started?";
+        phrase.text = $"You have 6 logs from today.\n" +
+                      $"Ready to untangle?";
     }
 
     void OnStartButtonPressed()
