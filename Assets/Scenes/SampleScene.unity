@@ -2575,6 +2575,35 @@ MonoBehaviour:
   startButton: {fileID: 918222722}
   username: Alex
   boxSpawner: {fileID: 1733342085}
+  themedImages:
+  - targetImage: {fileID: 476892860}
+    daySprite: {fileID: 21300000, guid: cc79d0bd51b5b489694660d939ff3683, type: 3}
+    nightSprite: {fileID: 21300000, guid: cbca94718a7fa4493be1c51be3a2cfe5, type: 3}
+  - targetImage: {fileID: 1922282109}
+    daySprite: {fileID: 21300000, guid: cc79d0bd51b5b489694660d939ff3683, type: 3}
+    nightSprite: {fileID: 21300000, guid: cbca94718a7fa4493be1c51be3a2cfe5, type: 3}
+  - targetImage: {fileID: 918222723}
+    daySprite: {fileID: 21300000, guid: fd196b9d5164d4f98bf8e6857580577e, type: 3}
+    nightSprite: {fileID: 21300000, guid: be4749970009c4e50b47caba0f4b5d29, type: 3}
+  - targetImage: {fileID: 1293196302}
+    daySprite: {fileID: 21300000, guid: fd196b9d5164d4f98bf8e6857580577e, type: 3}
+    nightSprite: {fileID: 21300000, guid: be4749970009c4e50b47caba0f4b5d29, type: 3}
+  themedTexts:
+  - targetText: {fileID: 2145361801}
+    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 0}
+    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 0}
+  - targetText: {fileID: 453948635}
+    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 0}
+    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 0}
+  - targetText: {fileID: 818420673}
+    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 0}
+    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 0}
+  - targetText: {fileID: 209808544}
+    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 0}
+    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 0}
+  - targetText: {fileID: 961946766}
+    dayColor: {r: 0.9607843, g: 0.91764706, b: 0.81960785, a: 0}
+    nightColor: {r: 0.92156863, g: 1, b: 0.99607843, a: 0}
 --- !u!1 &1509862072
 GameObject:
   m_ObjectHideFlags: 0
