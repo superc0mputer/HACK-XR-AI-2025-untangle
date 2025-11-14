@@ -100,7 +100,7 @@ public class MemoryBox : MonoBehaviour
         
         // Use the current scale of the text as the target if it's not 1
         // (Hackathon tip: Set the scale you want in Scene view, script will respect it)
-        endScale = new Vector3(0.005f, 0.005f, 0.005f); 
+        endScale = new Vector3(0.5f, 0.5f, 0.5f); 
 
         Vector3 startPos = panel.transform.localPosition;
         Vector3 endPos = startPos + new Vector3(0, floatHeight, 0);
