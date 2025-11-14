@@ -414,7 +414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: bAHbj
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90516e9d9af194769806da7246cf1dba, type: 2}
   m_sharedMaterial: {fileID: 7996290462932855317, guid: 90516e9d9af194769806da7246cf1dba, type: 2}
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 57.85
+  m_fontSize: 16
   m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1562,7 +1562,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Power Wash Game
+  m_text: 'Lens Shift
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90516e9d9af194769806da7246cf1dba, type: 2}
   m_sharedMaterial: {fileID: 7996290462932855317, guid: 90516e9d9af194769806da7246cf1dba, type: 2}
@@ -1698,7 +1700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Boxing Game
+  m_text: Body Scan
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90516e9d9af194769806da7246cf1dba, type: 2}
   m_sharedMaterial: {fileID: 7996290462932855317, guid: 90516e9d9af194769806da7246cf1dba, type: 2}
@@ -4947,7 +4949,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Breathing Exersice
+  m_text: "4\u20137\u20138 Breathing"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90516e9d9af194769806da7246cf1dba, type: 2}
   m_sharedMaterial: {fileID: 7996290462932855317, guid: 90516e9d9af194769806da7246cf1dba, type: 2}
