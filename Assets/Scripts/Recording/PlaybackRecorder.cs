@@ -126,10 +126,10 @@ public class PlaybackRecorder : MonoBehaviour
             RecordingItem newItem = Instantiate<RecordingItem>(itemPrefab, uiParent);
             
             // Moves the new item down based on how many recordings we have
-            float yOffset = recordingCount * -verticalSpacing; 
-            newItem.transform.localPosition = new Vector3(0, yOffset - 0.1f, 0); 
-            newItem.transform.localRotation = Quaternion.identity;
-            newItem.transform.localScale = Vector3.one;
+            //float yOffset = recordingCount * -verticalSpacing; 
+            //newItem.transform.localPosition = new Vector3(0, yOffset - 0.1f, 0); 
+            //newItem.transform.localRotation = Quaternion.identity;
+            //newItem.transform.localScale = Vector3.one;
             
             // Pass the clip and the SHARED AudioSource to the new item
             newItem.Setup(recordedClip, recName, audioSource);
