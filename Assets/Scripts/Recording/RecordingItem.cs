@@ -8,7 +8,6 @@ public class RecordingItem : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI durationText;
     public Button playButton;
-    public Image iconImage; // Optional: To change icon when playing
 
     private AudioClip myClip;
     private AudioSource sharedSource;

@@ -12,6 +12,10 @@ public class PlaybackRecorder : MonoBehaviour
     [Header("UI References")]
     public Button actionButton;
     public TextMeshProUGUI buttonText;
+    
+    [Header("List References")]
+    public RecordingItem itemPrefab;
+    public Transform uiParent;
 
     [Header("Settings")]
     public Color idleColor = Color.green;
@@ -27,6 +31,8 @@ public class PlaybackRecorder : MonoBehaviour
     private bool interactionCooldown = false; 
 
     private const int MAX_BUFFER = 60; 
+    private int recordingCount = 0;
+    public float verticalSpacing = 0.15f;
 
     void Start()
     {
@@ -74,7 +80,7 @@ public class PlaybackRecorder : MonoBehaviour
             {
                 audioSource.Stop();
             }
-            // CRITICAL: Cancel any pending resets from previous playbacks
+            // Cancel any pending resets from previous playbacks
             CancelInvoke("SetStateIdle");
             
             StartRecording();
@@ -89,7 +95,6 @@ public class PlaybackRecorder : MonoBehaviour
         Microphone.End(micDevice);
 
         // Start recording
-        // Note: On Quest, ensure Project Settings > Audio > DSP Buffer Size is 'Best Latency'
         recordedClip = Microphone.Start(micDevice, false, MAX_BUFFER, 44100);
         isRecording = true;
 
@@ -107,19 +112,44 @@ public class PlaybackRecorder : MonoBehaviour
         Microphone.End(micDevice);
         isRecording = false;
 
-        // 2. Trim and Play
+        // 2. Trim and Play/Save
         if (position > 0 && recordedClip != null)
         {
             recordedClip = TrimClip(recordedClip, position);
             
+            recordingCount++;
+            // Increment count for naming
+            string recName = "Recording " + recordingCount; // + date maybe
+            
+            // Instantiate the prefab into the scrollview container
+            
+            RecordingItem newItem = Instantiate<RecordingItem>(itemPrefab, uiParent);
+            
+            // Moves the new item down based on how many recordings we have
+            float yOffset = recordingCount * -verticalSpacing; 
+            newItem.transform.localPosition = new Vector3(0, yOffset - 0.1f, 0); 
+            newItem.transform.localRotation = Quaternion.identity;
+            newItem.transform.localScale = Vector3.one;
+            
+            // Pass the clip and the SHARED AudioSource to the new item
+            newItem.Setup(recordedClip, recName, audioSource);
+            
+            Debug.Log($"Created new recording item: {recName}");
+            
+            // Immediately go back to Idle (no need to wait for playback)
+            SetStateIdle();
+            
+
+            /* recordedClip = TrimClip(recordedClip, position);
+
             audioSource.clip = recordedClip;
             audioSource.Play();
-            
+
             UpdateUI(playingColor, "Playing...");
             Debug.Log($"Playing clip. Length: {recordedClip.length}");
 
             // Reset to idle only after this specific clip finishes
-            Invoke("SetStateIdle", recordedClip.length);
+            Invoke("SetStateIdle", recordedClip.length);*/
         }
         else
         {

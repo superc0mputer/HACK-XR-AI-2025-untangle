@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1571648601659930389}
   - component: {fileID: 3953235902243898086}
   m_Layer: 0
-  m_Name: RecordningScreen_Canvas
+  m_Name: RecordingScreen_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1115,9 +1115,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlaybackRecorder
   actionButton: {fileID: 6117515638110740559}
   buttonText: {fileID: 2531328488500556973}
+  itemPrefab: {fileID: 589383789253319563, guid: 836bbc2a2683a497f9bd3176e16ffee8, type: 3}
+  uiParent: {fileID: 2575993887730416054}
   idleColor: {r: 0, g: 1, b: 0, a: 1}
   recordColor: {r: 1, g: 0, b: 0, a: 1}
   playingColor: {r: 0, g: 1, b: 1, a: 1}
+  verticalSpacing: 0.15
 --- !u!1 &9138681201170706827
 GameObject:
   m_ObjectHideFlags: 0
