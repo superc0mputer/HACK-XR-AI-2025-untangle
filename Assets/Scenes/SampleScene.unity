@@ -1063,7 +1063,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: cbca94718a7fa4493be1c51be3a2cfe5, type: 3}
-  m_Type: 2
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2463,6 +2463,7 @@ GameObject:
   - component: {fileID: 1476677930}
   - component: {fileID: 1476677929}
   - component: {fileID: 1476677931}
+  - component: {fileID: 1476677932}
   m_Layer: 0
   m_Name: StartScreen_Canvas
   m_TagString: Untagged
@@ -2575,18 +2576,30 @@ MonoBehaviour:
   startButton: {fileID: 918222722}
   username: Alex
   boxSpawner: {fileID: 1733342085}
+--- !u!114 &1476677932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476677926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95f00b1b508e4eeb8a1fc276e6cf74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayNightHandler
   themedImages:
   - targetImage: {fileID: 476892860}
-    daySprite: {fileID: 21300000, guid: cc79d0bd51b5b489694660d939ff3683, type: 3}
+    daySprite: {fileID: 21300000, guid: f82ebde3522184869b55ae87cabb7086, type: 3}
     nightSprite: {fileID: 21300000, guid: cbca94718a7fa4493be1c51be3a2cfe5, type: 3}
   - targetImage: {fileID: 1922282109}
-    daySprite: {fileID: 21300000, guid: cc79d0bd51b5b489694660d939ff3683, type: 3}
+    daySprite: {fileID: 21300000, guid: f82ebde3522184869b55ae87cabb7086, type: 3}
     nightSprite: {fileID: 21300000, guid: cbca94718a7fa4493be1c51be3a2cfe5, type: 3}
   - targetImage: {fileID: 918222723}
-    daySprite: {fileID: 21300000, guid: fd196b9d5164d4f98bf8e6857580577e, type: 3}
+    daySprite: {fileID: 21300000, guid: a5d7e15051762402a8e8f20a4a48e2ba, type: 3}
     nightSprite: {fileID: 21300000, guid: be4749970009c4e50b47caba0f4b5d29, type: 3}
   - targetImage: {fileID: 1293196302}
-    daySprite: {fileID: 21300000, guid: fd196b9d5164d4f98bf8e6857580577e, type: 3}
+    daySprite: {fileID: 21300000, guid: a5d7e15051762402a8e8f20a4a48e2ba, type: 3}
     nightSprite: {fileID: 21300000, guid: be4749970009c4e50b47caba0f4b5d29, type: 3}
   themedTexts:
   - targetText: {fileID: 2145361801}
@@ -2604,6 +2617,7 @@ MonoBehaviour:
   - targetText: {fileID: 961946766}
     dayColor: {r: 0.9607843, g: 0.91764706, b: 0.81960785, a: 0}
     nightColor: {r: 0.92156863, g: 1, b: 0.99607843, a: 0}
+  forceUpdateNow: 0
 --- !u!1 &1509862072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,7 +2978,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: cbca94718a7fa4493be1c51be3a2cfe5, type: 3}
-  m_Type: 2
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
