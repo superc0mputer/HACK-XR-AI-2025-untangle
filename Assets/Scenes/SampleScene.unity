@@ -2684,7 +2684,7 @@ MonoBehaviour:
   memoryBoxPrefab: {fileID: 3992635961976980484, guid: 9b40c87835eb34dec83a25ff1a21d70f, type: 3}
   spawnRadius: 1
   spawnHeightOffset: 0.1
-  journalCSV: {fileID: 4900000, guid: 35666d4fd48b4656a88b5599432efabb, type: 3}
+  journalCSV: {fileID: 4900000, guid: 047942841925141a2a3f9038418ababe, type: 3}
 --- !u!4 &1733342086
 Transform:
   m_ObjectHideFlags: 0
