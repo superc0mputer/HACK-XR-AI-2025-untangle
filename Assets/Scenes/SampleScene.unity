@@ -2603,20 +2603,20 @@ MonoBehaviour:
     nightSprite: {fileID: 21300000, guid: be4749970009c4e50b47caba0f4b5d29, type: 3}
   themedTexts:
   - targetText: {fileID: 2145361801}
-    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 0}
-    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 0}
+    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 1}
+    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 1}
   - targetText: {fileID: 453948635}
-    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 0}
-    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 0}
+    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 1}
+    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 1}
   - targetText: {fileID: 818420673}
-    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 0}
-    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 0}
+    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 1}
+    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 1}
   - targetText: {fileID: 209808544}
-    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 0}
-    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 0}
+    dayColor: {r: 0.9490196, g: 0.8156863, b: 0.49411765, a: 1}
+    nightColor: {r: 0.3019608, g: 0.49411765, b: 0.57254905, a: 1}
   - targetText: {fileID: 961946766}
-    dayColor: {r: 0.9607843, g: 0.91764706, b: 0.81960785, a: 0}
-    nightColor: {r: 0.92156863, g: 1, b: 0.99607843, a: 0}
+    dayColor: {r: 0.9607843, g: 0.91764706, b: 0.81960785, a: 1}
+    nightColor: {r: 0.92156863, g: 1, b: 0.99607843, a: 1}
   forceUpdateNow: 0
 --- !u!1 &1509862072
 GameObject:
